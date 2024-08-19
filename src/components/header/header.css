@@ -1,0 +1,255 @@
+/* 
+===============
+Table Of Contents
+===============
+1- Animation
+2- Navbar
+3- Media Query
+*/
+
+/* =============== 1- Animation ================ */
+
+@keyframes mymove {
+    0% {
+        scale: 0;
+    }
+
+    60% {
+        scale: 1.2;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+/* =============== 2- Navbar ================ */
+
+/* https://www.websitecodetutorials.com/code/css/css-center-nav.php */
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin-top: 1.2rem;
+
+    /* In Large Screen */
+
+    nav {
+
+        background-color: var(--bgHeader);
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        border: 2px solid var(--border);
+        padding: 0.77rem 1.6rem;
+        box-shadow: 1px 1px 40px #2323242a;
+
+        ul {
+
+            list-style-type: none;
+            display: flex;
+            gap: 16px;
+
+            li {
+
+                a {
+                    text-decoration: none;
+                    color: var(--title);
+                    opacity: 0.9;
+                    font-size: 0.88rem;
+                    font-weight: 500;
+                    transition: 0.2s;
+                    -webkit-transition: 0.2s;
+                    -moz-transition: 0.2s;
+                    -ms-transition: 0.2s;
+                    -o-transition: 0.2s;
+
+                    &:hover {
+                        color: var(--green);
+                        opacity: 1;
+                        font-size: 0.9rem;
+                    }
+                }
+
+                a.active{
+                    color: var(--green);
+                }
+
+            }
+
+        }
+
+    }
+
+    /* In Small Screen */
+
+    button.menu {
+
+        display: none;
+        background-color: var(--bgHeader);
+        color: var(--subtitle);
+        font-size: 1.2rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        border: 1px solid rgba(244, 165, 96, 0.249);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        text-align: center;
+
+        &:hover {
+            color: var(--title);
+            border: 1px solid rgb(244, 165, 96);
+        }
+
+    }
+
+    /* For Modal */
+
+    .modal {
+
+        position: fixed;
+        inset: 0;
+        z-index: 11;
+        background-color: rgba(40, 40, 48, 0.91);
+        backdrop-filter: blur(4px);
+
+        ul {
+            list-style-type: none;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background-color: var(--secondary);
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+            animation: mymove 0.77s 1;
+            -moz-animation: mymove 0.77s 1;
+            -ms-animation: mymove 0.77s 1;
+            -webkit-animation: mymove 0.77s 1;
+
+            li {
+
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 0.77rem;
+                padding-top: 0.5rem;
+
+                &:first-child {
+                    text-align: right;
+                    border: none;
+                    padding-bottom: 0;
+                    padding-top: 0.2rem;
+                    margin-bottom: -1rem;
+                }
+
+                &:last-child {
+                    border: none;
+                }
+
+                button.icon-close {
+                    color: var(--subtitle);
+                    font-size: 1.5rem;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    -moz-transition: 0.3s;
+                    -ms-transition: 0.3s;
+                    -o-transition: 0.3s;
+                    -webkit-transition: 0.3s;
+
+                    &:hover {
+                        /* font-size: 1.7rem; */
+                        color: crimson;
+                        rotate: 180deg;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: var(--title);
+                    opacity: 0.9;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    transition: 0.2s;
+                    -webkit-transition: 0.2s;
+                    -moz-transition: 0.2s;
+                    -ms-transition: 0.2s;
+                    -o-transition: 0.2s;
+
+                    &:hover {
+                        color: var(--green);
+                        opacity: 1;
+                    }
+                }
+
+                a.active{
+                    color: var(--green);
+                }
+            }
+
+        }
+    }
+
+    /* For Toggle Theme Button */
+
+    button.mode{
+
+        background-color: var(--bgHeader);
+        color: var(--subtitle);
+        font-size: 1.2rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        border: 1px solid rgba(244, 165, 96, 0.249);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        text-align: center;
+
+        &:hover {
+            color: var(--title);
+            border: 1px solid rgb(244, 165, 96);
+        }
+        
+    }
+
+}
+
+/* =============== 3- Media Query ================ */
+
+@media (max-width: 700px) {
+
+    .hide-when-mobile {
+        display: none;
+    }
+
+    button.menu {
+        display: block !important;
+    }
+
+}

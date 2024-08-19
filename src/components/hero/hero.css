@@ -1,0 +1,77 @@
+.hero {
+
+    display: flex;
+    margin-top: 3rem;
+
+    .left-section {
+
+        flex-grow: 1;
+
+        .parent-avatar {
+
+            display: flex;
+            align-items: end;
+            gap: 0.6rem;
+            min-height: 88px;
+
+            .avatar {
+                width: 88px;
+                padding: 1px;
+                border: 1px solid rgb(244, 165, 96);
+                border-radius: 50%;
+                box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.586) inset;
+            }
+
+            span {
+                display: block;
+                color: var(--green);
+                font-size: 1.1rem;
+                margin-bottom: 0.3rem;
+            }
+
+        }
+
+        h1.title {
+            color: var(--title);
+            font-size: 2.85rem;
+            line-height: 3.3rem;
+            margin: 24px 0;
+        }
+
+        p.sub-title {
+            color: var(--subtitle);
+            font-size: 0.9rem;
+            line-height: 1.65rem;
+            margin-bottom: 32px;
+        }
+
+        .allIcons {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            color: var(--subtitle);
+            font-size: 1.3rem;
+
+            i:hover {
+                color: var(--title);
+                font-size: 1.4rem;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+        }
+
+    }
+
+    .right-section.animation {
+        width: 100%;
+        translate: 100px 55px;
+    }
+
+}
+
+@media (max-width: 1250px) {
+    section.hero .animation {
+        display: none;
+    }
+}
